@@ -14,6 +14,29 @@ nav.querySelectorAll('a').forEach((link) => {
   });
 });
 
+const menuImageTrigger = document.querySelector('.menu-image-trigger');
+const menuLightbox = document.querySelector('.menu-lightbox');
+const menuLightboxClose = document.querySelector('.menu-lightbox-close');
+
+if (menuImageTrigger && menuLightbox && menuLightboxClose) {
+  menuImageTrigger.addEventListener('click', () => menuLightbox.showModal());
+  menuLightboxClose.addEventListener('click', () => menuLightbox.close());
+  menuLightbox.addEventListener('click', (event) => {
+    if (event.target === menuLightbox) menuLightbox.close();
+  });
+}
+
+const specialDrinkCards = document.querySelectorAll('.special-drink-card');
+specialDrinkCards.forEach((card) => {
+  card.addEventListener('click', () => {
+    specialDrinkCards.forEach((drinkCard) => {
+      const active = drinkCard === card;
+      drinkCard.classList.toggle('is-active', active);
+      drinkCard.setAttribute('aria-expanded', String(active));
+    });
+  });
+});
+
 const revealItems = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries) => {

@@ -42,6 +42,9 @@
         <a href="#menu">
            Menú 
         </a>
+        <a class="nav-special-link" href="bebidas.html">
+           Sodas italianas
+        </a>
         <a href="#nosotros">
            Nuestra esencia 
         </a>
@@ -118,28 +121,28 @@
             >
             <img
               class="hero-drink"
-              src="img/Cold%20-%20copia.jpeg"
+              src="img/Cold%20-%20copia.jpg"
               alt="Bebida fría de café con caramelo de Alquimia Café"
               draggable="false"
               aria-hidden="true"
             >
             <img
               class="hero-drink"
-              src="img/Cold%20-%20copia%20%282%29.jpeg"
+              src="img/Cold%20-%20copia%20%282%29.jpg"
               alt="Bebida fría de café con caramelo de Alquimia Café"
               draggable="false"
               aria-hidden="true"
             >
             <img
               class="hero-drink"
-              src="img/Cold%20-%20copia%20%283%29.jpeg"
+              src="img/Cold%20-%20copia%20%283%29.jpg"
               alt="Bebida fría de café con caramelo de Alquimia Café"
               draggable="false"
               aria-hidden="true"
             >
             <img
               class="hero-drink"
-              src="img/Cold%20-%20copia%20%284%29.jpeg"
+              src="img/Cold%20-%20copia%20%284%29.jpg"
               alt="Bebida fría de café con caramelo de Alquimia Café"
               draggable="false"
               aria-hidden="true"
@@ -410,7 +413,10 @@
             </div>
           </div>
           <div class="menu-art reveal">
-            <img src="img/Menu.jpeg" alt="Menú de Alquimia Café con bebidas y niveles de dulzor">
+            <button class="menu-image-trigger" type="button" aria-haspopup="dialog" aria-label="Ampliar imagen del menú">
+              <img src="img/Menu.jpeg" alt="Menú de Alquimia Café con bebidas y niveles de dulzor">
+              <span class="menu-image-hint">Toca para ampliar <b>↗</b></span>
+            </button>
             <div class="art-label">
               <span>
                  EL MENÚ 
@@ -724,6 +730,10 @@
         </div>
       </section>
     </main>
+    <dialog class="menu-lightbox" aria-label="Menú de Alquimia Café ampliado">
+      <button class="menu-lightbox-close" type="button" aria-label="Cerrar imagen">×</button>
+      <img src="img/Menu.jpeg" alt="Menú de Alquimia Café con bebidas y niveles de dulzor, ampliado">
+    </dialog>
     <footer>
       <a class="brand footer-brand" href="#inicio">
         <img src="img/Logo.jpeg" alt="">
